@@ -1,0 +1,37 @@
+.login-modal-box{
+    position: absolute;
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    border: '2px solid #112';
+    border-color: #000;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow:rgb(163, 29, 163) 0px 5px 15px;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    background-color: white;
+    color: #000;
+    padding: 15px;
+    text-align: center;
+}
+
+.login-modal-button{
+    margin: 8px;  
+    font-size: 11px;
+}
+.modal-footer{
+    margin-top: 50px;
+}
+.MuiFormHelperText-root {
+    font-size: small;
+}
+.MuiAlert-message{
+    font-size: small;
+}
+@media (min-width: screen-md-min) {
+    .modal-dialog { 
+        max-width: 800px;
+    }
+}
+ 

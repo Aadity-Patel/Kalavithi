@@ -1,0 +1,57 @@
+body {
+    background: #141414;
+    color: #FFFFFF;
+    padding: 0;
+    margin: 0;
+}
+
+.kala-app > .row {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+
+}
+
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+
+}
+.overlay {
+	position: absolute;
+	background: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	transition: 0.5s ease;
+	opacity: 0;
+	bottom: 0;
+	font-size: 20px;
+	padding: 20px;
+	text-align: center;
+}
+.form-control{
+margin-right: 3%;
+}
+.username{
+    /* width: 125px;
+    height:28px; */
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 1px;
+    padding-top:5px;
+}
+
+.header-content{
+    display:flex;
+    align-items:flex-end;
+    
+    }    
+@media (max-width: 540px) {
+    
+    .header-content { 
+    
+        flex-direction: column;
+    }
+}

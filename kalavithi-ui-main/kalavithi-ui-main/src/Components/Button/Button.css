@@ -1,0 +1,17 @@
+.button{
+    width: 110px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-size: small;
+}
+
+.button:hover{
+    background-color: rgb(163, 29, 163);
+    color: white;
+}
+@media(max-width:480px){
+    .button{
+        font-size: smaller;
+    }
+}

@@ -1,0 +1,11 @@
+.drop-down{
+    width: 100px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+.drop-down:hover{
+    background-color: rgb(163, 29, 163);
+    color: white;
+}
