@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}?currentSchema=${DB_SCHEMA}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+  jpa:
+    show-sql: true
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+server:
+  error:
+    include-message: always
+  servlet:
+    context-path: /api
+
+springdoc:
+  show-actuator: true
+  packages-to-scan: "com.tw.prograd"
+
+storage:
+  initialize: true
+  location: images
+
+flyway:
+    baselineOnMigrate: true

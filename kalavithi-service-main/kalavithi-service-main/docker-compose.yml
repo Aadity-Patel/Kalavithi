@@ -1,0 +1,32 @@
+version: '3.9'
+
+services:
+  app:
+    image: kalavithi-service
+    build:
+      context: .
+      dockerfile: ./docker/app/Dockerfile
+    container_name: kalavithi-service
+    depends_on:
+      - kalavithi-service-db
+    environment:
+      DB_HOST: kalavithi-service-db
+      DB_PORT: 5432
+      DB_USERNAME: plus
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_NAME: kalavithi_db
+      DB_SCHEMA: kalavithi
+    ports:
+      - "8080:8080"
+
+  db:
+    image: postgres:14.2-alpine
+    container_name: kalavithi-service-db
+    volumes:
+      - ./docker/db/create_schema.sql:/docker-entrypoint-initdb.d/create_schema.sql
+    environment:
+      POSTGRES_USER: plus
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: kalavithi_db
+    ports:
+      - "5432:5432"
